@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MIRA – Kavana & Brunch</title>
+
+    <!-- Povezivanje CSS dokumenta -->
+    <link rel="stylesheet" href="mira.css">
+
+    <!-- Odabrani fontovi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigacija -->
+    <header class="zaglavlje">
+        <a href="#pocetna" class="logo">MIRA<span>♥</span></a>
+
+        <nav class="navigacija">
+            <a href="#o-nama">O nama</a>
+            <a href="#ponuda">Jelovnik</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="#ponuda" class="gumb-navigacije">Pogledaj ponudu ↗</a>
+        </nav>
+    </header>
+
+
+    <!-- Naslovni dio stranice -->
+    <main>
+
+        <section class="pocetna" id="pocetna">
+
+            <div class="pocetna-tekst">
+                <span class="oznaka">DOBRODOŠLI U MIRU!</span>
+
+                <h1>
+                    DOBRA HRANA.
+                    <span>DOBAR DAN.</span>
+                </h1>
+
+                <p>
+                    Mjesto za spora jutra, ukusne zalogaje,
+                    dobru kavu i još bolje društvo.
+                </p>
+
+                <a href="#ponuda" class="glavni-gumb">
+                    ISTRAŽI JELOVNIK ↓
+                </a>
+            </div>
+
+            <!-- Fotografija hrane -->
+            <div class="pocetna-slika">
+                <img
+                    src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1000&q=85"
+                    alt="Ukusan doručak s palačinkama i voćem">
+
+                <div class="okrugla-naljepnica">
+                    FRESH<br>EVERY<br>DAY!
+                </div>
+            </div>
+
+            <div class="ukras-zvijezda">✳</div>
+            <div class="ukras-srce">♥</div>
+
+        </section>
+
+
+        <!-- Traka s porukama -->
+        <div class="traka">
+            <span>SVJEŽE NAMIRNICE ✳ DOBRA KAVA ✳ JOŠ BOLJI BRUNCH ✳</span>
+        </div>
+
+
+        <!-- O nama -->
+        <section class="o-nama" id="o-nama">
+
+            <div class="o-nama-slika">
+                <img
+                    src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=85"
+                    alt="Ugodan interijer kavane">
+
+                <span class="slika-naljepnica">MALO MIRA, PUNO UŽITKA ♥</span>
+            </div>
+
+            <div class="o-nama-tekst">
+                <span class="oznaka">NAŠA PRIČA</span>
+
+                <h2>MJESTO GDJE<br>JUTRA TRAJU<br><span>MALO DUŽE.</span></h2>
+
+                <p>
+                    MIRA je više od obične kavane. To je mjesto na kojem
+                    dan počinje uz miris svježe kave, ukusne doručke
+                    i opuštenu atmosferu.
+                </p>
+
+                <p>
+                    Vjerujemo da su male stvari najvažnije:
+                    dobar obrok, dragi ljudi i trenutak samo za sebe.
+                </p>
+
+                <a href="#kontakt" class="tekst-gumb">UPOZNAJ NAS →</a>
+            </div>
+
+        </section>
+
+
+       <!-- Pregled jelovnika na početnoj stranici -->
+     <section class="ponuda" id="ponuda">
+
+    <div class="naslov-ponude">
+        <span class="oznaka">NEŠTO FINO ZA TEBE</span>
+        <h2>NAŠ <span>JELOVNIK.</span></h2>
+        <p>Od prvog gutljaja kave do posljednjeg zalogaja.</p>
+    </div>
+
+    <div class="jelovnik">
+
+        <!-- Prvo jelo -->
+        <article class="stavka">
+            <div class="stavka-slika">
+                <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=700&q=85" alt="Palačinke s voćem">
+            </div>
+
+            <div class="stavka-opis">
+                <span>DORUČAK</span>
+                <h3>Slatke palačinke</h3>
+                <p>Mekane palačinke, svježe voće i preljev po izboru.</p>
+                <strong>7,50 €</strong>
+            </div>
+        </article>
+
+        <!-- Drugo jelo -->
+        <article class="stavka">
+            <div class="stavka-slika">
+                <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=700&q=85" alt="Sendvič s jajima i povrćem">
+            </div>
+
+            <div class="stavka-opis">
+                <span>BRUNCH</span>
+                <h3>Jutarnji sendvič</h3>
+                <p>Hrskavi kruh, jaja, avokado i svježe povrće.</p>
+                <strong>8,90 €</strong>
+            </div>
+        </article>
+
+        <!-- Treće jelo -->
+        <article class="stavka">
+            <div class="stavka-slika">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=85" alt="Šalica kave">
+            </div>
+
+            <div class="stavka-opis">
+                <span>NAPITAK</span>
+                <h3>Ledena kava</h3>
+                <p>Espresso, mlijeko, led i malo slatkog užitka.</p>
+                <strong>4,20 €</strong>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="napomena">* Cijene su informativne i dio su oglednog projekta.</p>
+
+    <!-- Gumb koji otvara zasebnu stranicu jelovnika -->
+    <div class="gumb-cijeli-jelovnik">
+        <a href="jelovnik.html" class="glavni-gumb">
+            POGLEDAJ CIJELI JELOVNIK ↗
+        </a>
+    </div>
+
+</section>
+
+
+        <!-- Posebna poruka -->
+        <section class="poruka">
+            <span>♥</span>
+            <h2>USPORI. UŽIVAJ.<br>PONOVI.</h2>
+            <p>Jer svaki dan zaslužuje dobar početak.</p>
+        </section>
+
+
+        <!-- Kontakt -->
+        <section class="kontakt" id="kontakt">
+
+            <div class="kontakt-tekst">
+                <span class="oznaka">SVRATI DO NAS</span>
+
+                <h2>VIDIMO SE<br>U MIRI<span>!</span></h2>
+
+                <p>
+                    Tvoj novi omiljeni kutak za kavu,
+                    doručak i druženje čeka na tebe.
+                </p>
+            </div>
+
+            <div class="kontakt-podaci">
+                <div>
+                    <span>ADRESA</span>
+                    <p>Ulica dobrih jutara 12, Split</p>
+                </div>
+
+                <div>
+                    <span>RADNO VRIJEME</span>
+                    <p>Pon – Ned: 08:00 – 20:00</p>
+                </div>
+
+                <div>
+                    <span>DRUŠTVENE MREŽE</span>
+                    <p>@mira.brunch</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Podnožje stranice -->
+    <footer class="podnozje">
+        <a href="#pocetna" class="logo">MIRA<span>♥</span></a>
+
+        <p>© 2026 MIRA – KAVANA & BRUNCH</p>
+
+        <a href="#pocetna">POVRATAK NA VRH ↑</a>
+    </footer>
+
+</body>
+</html>

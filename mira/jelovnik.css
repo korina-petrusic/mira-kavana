@@ -1,0 +1,746 @@
+
+/* =====================================
+   MIRA – CIJELI JELOVNIK
+   Boje, fontovi i osnovne postavke
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap');
+
+:root {
+    --krem: #fff3e5;
+    --roza: #f5a8b8;
+    --tamno-roza: #e85c78;
+    --zuta: #f7d96b;
+    --plava: #252b55;
+    --bijela: #fffaf3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--krem);
+    color: var(--plava);
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =====================================
+   ZAGLAVLJE
+===================================== */
+
+.zaglavlje {
+    width: 100%;
+    min-height: 88px;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: var(--krem);
+    border-bottom: 3px solid var(--plava);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    flex-shrink: 0;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--tamno-roza);
+}
+
+.navigacija {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 27px;
+}
+
+.navigacija a {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.25s ease;
+}
+
+.navigacija a:hover {
+    color: var(--tamno-roza);
+}
+
+.header-gumb {
+    padding: 13px 20px;
+    background: var(--zuta);
+    border: 2px solid var(--plava);
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 900;
+    white-space: nowrap;
+    transition: 0.25s ease;
+}
+
+.header-gumb:hover {
+    background: var(--roza);
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   HERO – NASLOVNA SEKCIJA
+===================================== */
+
+.hero {
+    width: min(1120px, calc(100% - 48px));
+    min-height: 570px;
+    margin: 55px auto 75px;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+    position: relative;
+}
+
+.hero-sadrzaj {
+    position: relative;
+    z-index: 2;
+}
+
+.mali-naslov {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--tamno-roza);
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(75px, 9vw, 125px);
+    line-height: 0.88;
+    letter-spacing: -7px;
+    margin-bottom: 28px;
+}
+
+.hero h1 span {
+    color: var(--tamno-roza);
+}
+
+.hero-opis {
+    max-width: 390px;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.glavni-gumb {
+    display: inline-block;
+    padding: 16px 25px;
+    background: var(--plava);
+    color: var(--krem);
+    border: 2px solid var(--plava);
+    border-radius: 35px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.glavni-gumb:hover {
+    background: var(--zuta);
+    color: var(--plava);
+    transform: translateY(-4px);
+}
+
+.hero-slika {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    justify-self: center;
+    transform: rotate(3deg);
+}
+
+.hero-slika img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border: 9px solid var(--bijela);
+    box-shadow: 12px 12px 0 var(--roza);
+    border-radius: 5px;
+}
+
+.slika-naljepnica {
+    position: absolute;
+    bottom: 28px;
+    left: -25px;
+    padding: 17px 20px;
+    background: var(--zuta);
+    border: 2px solid var(--plava);
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 900;
+    transform: rotate(-12deg);
+}
+
+.hero-ukras {
+    position: absolute;
+    right: -25px;
+    top: 20px;
+    color: var(--roza);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 0.9;
+    transform: rotate(10deg);
+    text-align: center;
+    pointer-events: none;
+}
+
+
+/* =====================================
+   POKRETNA TRAKA
+===================================== */
+
+.traka {
+    width: 100%;
+    overflow: hidden;
+    padding: 17px 0;
+    background: var(--zuta);
+    border-top: 3px solid var(--plava);
+    border-bottom: 3px solid var(--plava);
+}
+
+.traka-tekst {
+    width: max-content;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    animation: pomicanje 22s linear infinite;
+}
+
+@keyframes pomicanje {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-35%);
+    }
+}
+
+
+/* =====================================
+   UVOD U JELOVNIK
+===================================== */
+
+.uvod {
+    width: min(700px, calc(100% - 40px));
+    margin: 100px auto 70px;
+    text-align: center;
+}
+
+.uvod h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.uvod h2 span {
+    color: var(--tamno-roza);
+}
+
+.uvod > p:last-child {
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   KATEGORIJE JELOVNIKA
+===================================== */
+
+.kategorija {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto 55px;
+    padding: 48px 55px;
+    background: var(--bijela);
+    border: 2px solid var(--plava);
+    box-shadow: 9px 9px 0 var(--zuta);
+    border-radius: 5px;
+    scroll-margin-top: 35px;
+}
+
+.kategorija.roza {
+    background: #ffe0e5;
+    box-shadow: 9px 9px 0 var(--roza);
+}
+
+.kategorija-naslov {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 27px;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed rgba(37, 43, 85, 0.35);
+}
+
+.broj-kategorije {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--tamno-roza);
+    margin-bottom: 12px;
+}
+
+.kategorija-naslov h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.kategorija-naslov h2 span {
+    color: var(--tamno-roza);
+}
+
+.kategorija-emoji {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: var(--zuta);
+    border: 2px solid var(--plava);
+    border-radius: 50%;
+    font-size: 30px;
+    transform: rotate(10deg);
+}
+
+
+/* =====================================
+   POJEDINAČNA JELA
+===================================== */
+
+.stavke {
+    display: flex;
+    flex-direction: column;
+}
+
+.stavka {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 22px 5px;
+    border-bottom: 1px solid rgba(37, 43, 85, 0.2);
+    transition: 0.25s ease;
+}
+
+.stavka:last-child {
+    border-bottom: none;
+}
+
+.stavka:hover {
+    padding-left: 13px;
+    background: rgba(245, 168, 184, 0.13);
+}
+
+.stavka-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.stavka-info p {
+    max-width: 550px;
+    font-size: 13px;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+.cijena {
+    padding: 8px 13px;
+    background: var(--zuta);
+    border-radius: 20px;
+    border: 1px solid var(--plava);
+    font-size: 13px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+
+/* =====================================
+   ZAVRŠNA SEKCIJA
+===================================== */
+
+.zavrsna {
+    width: min(1120px, calc(100% - 48px));
+    margin: 110px auto 100px;
+    padding: 80px 25px;
+    background: var(--roza);
+    border: 3px solid var(--plava);
+    box-shadow: 12px 12px 0 var(--plava);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.zavrsna > p {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.zavrsna h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: 0.95;
+    margin-bottom: 35px;
+    letter-spacing: -4px;
+}
+
+.zavrsna h2 span {
+    color: var(--bijela);
+}
+
+.zavrsna-zvijezda {
+    position: absolute;
+    right: 7%;
+    top: 12%;
+    color: var(--zuta);
+    font-size: 75px;
+    transform: rotate(15deg);
+}
+
+
+/* =====================================
+   PODNOŽJE
+===================================== */
+
+.podnozje {
+    width: 100%;
+    background: var(--plava);
+    color: var(--krem);
+    border-top: 8px solid var(--roza);
+    padding: 65px 7% 25px;
+}
+
+.footer-gornji {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 45px;
+    padding-bottom: 55px;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: var(--krem);
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 5px;
+}
+
+.footer-brand > p:first-of-type {
+    color: var(--zuta);
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.footer-opis {
+    max-width: 240px;
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+.footer-kolona h3 {
+    color: var(--zuta);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.footer-kolona a,
+.footer-kolona p {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--krem);
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.footer-kolona a {
+    transition: 0.25s ease;
+}
+
+.footer-kolona a:hover {
+    color: var(--roza);
+    transform: translateX(5px);
+}
+
+.footer-dno {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding-top: 23px;
+    border-top: 1px solid rgba(255, 243, 229, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-dno p,
+.footer-dno a {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--krem);
+    opacity: 0.8;
+}
+
+.footer-dno a:hover {
+    color: var(--zuta);
+}
+
+
+/* =====================================
+   TABLETI
+===================================== */
+
+@media (max-width: 900px) {
+
+    .zaglavlje {
+        padding: 18px 4%;
+        gap: 15px;
+    }
+
+    .navigacija {
+        gap: 14px;
+    }
+
+    .navigacija a {
+        font-size: 10px;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-slika img {
+        height: 350px;
+    }
+
+    .footer-gornji {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================
+   MOBITELI
+===================================== */
+
+@media (max-width: 600px) {
+
+    .zaglavlje {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 15px;
+        gap: 17px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .navigacija {
+        width: 100%;
+        gap: 12px 18px;
+    }
+
+    .navigacija a {
+        font-size: 10px;
+    }
+
+    .header-gumb {
+        display: none;
+    }
+
+    .hero {
+        width: calc(100% - 40px);
+        grid-template-columns: 1fr;
+        margin: 55px auto 65px;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 85px;
+        letter-spacing: -5px;
+    }
+
+    .hero-opis {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-slika {
+        width: 85%;
+        max-width: 350px;
+    }
+
+    .hero-slika img {
+        height: 330px;
+    }
+
+    .hero-ukras {
+        right: 0;
+        top: 45%;
+        font-size: 23px;
+    }
+
+    .uvod {
+        margin: 75px auto 50px;
+    }
+
+    .kategorija {
+        width: calc(100% - 35px);
+        padding: 30px 22px;
+        margin-bottom: 40px;
+        box-shadow: 6px 6px 0 var(--zuta);
+    }
+
+    .kategorija.roza {
+        box-shadow: 6px 6px 0 var(--roza);
+    }
+
+    .kategorija-naslov h2 {
+        font-size: 36px;
+    }
+
+    .kategorija-emoji {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .stavka {
+        gap: 12px;
+        padding: 19px 2px;
+    }
+
+    .stavka-info h3 {
+        font-size: 17px;
+    }
+
+    .stavka-info p {
+        font-size: 12px;
+    }
+
+    .cijena {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+
+    .zavrsna {
+        width: calc(100% - 35px);
+        margin: 75px auto 75px;
+        padding: 65px 15px;
+        box-shadow: 7px 7px 0 var(--plava);
+    }
+
+    .zavrsna-zvijezda {
+        font-size: 42px;
+    }
+
+    .footer-gornji {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 20px;
+    }
+
+    .footer-logo {
+        font-size: 40px;
+    }
+
+    .footer-dno {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+/* =====================================
+   MANJI MOBITELI
+===================================== */
+
+@media (max-width: 380px) {
+
+    .navigacija {
+        gap: 10px;
+    }
+
+    .navigacija a {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 68px;
+    }
+
+    .kategorija {
+        padding: 25px 16px;
+    }
+
+    .kategorija-naslov h2 {
+        font-size: 30px;
+    }
+
+    .cijena {
+        font-size: 10px;
+    }
+
+    .footer-gornji {
+        grid-template-columns: 1fr;
+    }
+}
